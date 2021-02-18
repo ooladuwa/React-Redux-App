@@ -2,7 +2,11 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: "media", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      // backgroundImage: (theme) => ({
+      //   "hero-image": "url('./src/images/chucknorris2.jpg')",
+      // }),
+    },
   },
   variants: {
     extend: {},

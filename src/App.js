@@ -5,10 +5,10 @@ import Jokes from "./components/Jokes";
 function App() {
   return (
     <div>
-      <h1 className="font-mono text-6xl text-center">
+      <h1 className="font-mono text-4xl text-center text-transform-uppercase">
         Random Chuck Norris Quote Generator
       </h1>
-      <Jokes />
+      <Jokes className="text-xl" />
     </div>
   );
 }

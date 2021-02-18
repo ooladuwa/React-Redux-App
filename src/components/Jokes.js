@@ -20,7 +20,7 @@ const Jokes = (props) => {
     return <h2>Wait for it ya pansy!</h2>;
   }
   return (
-    <div className="flex justify-center bg-gray-400 ">
+    <div className="flex justify-center bg-hero-image bg-gray-400 ">
       <br />
       <h1>{joke}</h1>
       <br />
