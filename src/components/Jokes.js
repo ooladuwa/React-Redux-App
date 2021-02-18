@@ -6,8 +6,6 @@ import { getJoke } from "../actions/index";
 const Jokes = (props) => {
   const { joke, isFetching, error } = props;
 
-  console.log(joke);
-
   const handleClick = () => {
     props.getJoke();
   };
@@ -22,10 +20,14 @@ const Jokes = (props) => {
     return <h2>Wait for it ya pansy!</h2>;
   }
   return (
-    <div classname="display-flex justify-items-center">
-      <h2> Do you know Chuck?</h2>
-      <h2>{joke}</h2>
-      <button className="bg-blue-400" onClick={handleClick}>
+    <div className="flex justify-center bg-gray-400 ">
+      <br />
+      <h1>{joke}</h1>
+      <br />
+      <button
+        className="bg-blue-400 border-blue-800 m-4 p-2 rounded-md shadow-2xl hover:bg-red-500"
+        onClick={handleClick}
+      >
         Get Some!
       </button>
     </div>
