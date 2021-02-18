@@ -5,7 +5,7 @@ import {
 } from "../actions/index";
 
 const initialState = {
-  quote: "",
+  joke: "",
   isFetching: false,
   error: "",
 };

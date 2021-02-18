@@ -4,7 +4,9 @@ import { connect } from "react-redux";
 import { getJoke } from "../actions/index";
 
 const Jokes = (props) => {
-  const { isFetching, error } = props;
+  const { joke, isFetching, error } = props;
+
+  console.log(joke);
 
   const handleClick = () => {
     props.getJoke();
@@ -20,10 +22,13 @@ const Jokes = (props) => {
     return <h2>Wait for it ya pansy!</h2>;
   }
   return (
-    <>
-      <h2>Do you know Chuck?</h2>
-      <button onClick={handleClick}>Get Some!</button>
-    </>
+    <div classname="display-flex justify-items-center">
+      <h2> Do you know Chuck?</h2>
+      <h2>{joke}</h2>
+      <button className="bg-blue-400" onClick={handleClick}>
+        Get Some!
+      </button>
+    </div>
   );
 };
 

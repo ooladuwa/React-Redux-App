@@ -11,14 +11,17 @@ export const getJoke = () => {
     axios
       .get("http://api.icndb.com/jokes/random")
       .then((res) => {
-        dispatch({ type: FETCH_JOKE_SUCCESS, payload: res.data.joke });
+        console.log(res.data.value);
+
+        dispatch({ type: FETCH_JOKE_SUCCESS, payload: res.data.value.joke });
       })
+
       .catch((err) => {
-        dispatch({ type: FETCH_JOKE_SUCCESS, payload: err.response });
+        dispatch({ type: FETCH_JOKE_FAIL, payload: err.response });
       });
   };
 };
-export const fetchQuoteLoading = () => {
+export const fetchJokeLoading = () => {
   return { type: FETCH_JOKE_LOADING };
 };
 
